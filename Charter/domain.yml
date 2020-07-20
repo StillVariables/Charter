@@ -1,0 +1,27 @@
+intents:
+  - greet
+  - goodbye
+  - branch_entry
+  - atm_entry
+  - CCC_entry
+  - acc_show
+
+
+actions:
+  - action_branch_search
+  - action_atm_search
+  - action_ccc_search
+  - action_acc_details
+
+responses:
+  utter_greet:
+  - text: "Hey! I am Charter.Please provide your Account no or TownName or CountrySubdivision or Credit Card you want to search"
+
+
+  utter_goodbye:
+  - text: "Bye"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
