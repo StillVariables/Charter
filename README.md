@@ -6,7 +6,60 @@ Goal
 The aim of this application is to demonstrate ChatBot using open banking API's for customer queries related to branch, ATM, account details and balances with interative communication channel using open source libraries and tools.
 
 --Edit from here--------------
-The SDK application can run in two different modes, TLS (Basic Authentication) as default, or MATLS (OAuth2). All Open Banking APIs in production use MATLS and therefor it is recommended to use MATLS in production. The SDK is provided with TLS(ClientId/Client Secret) as default to get application quick started. For MATLS you need to obtain Open Banking Transport and Signing Certs. Please refer to [How to run SDK with MATLS](#how-to-run-sdk-with-matls)
+### Prerequisites:-
+The prerequisites for developing and understanding a chatbot
+• Python installed
+• Microsoft Build tools with visual c++ 14.0 installed. Link:https://visualstudio.microsoft.com/downloads/
+• Pycharm (Python Editor)
+
+
+
+### Modules
+Rasa is an open source machine learning framework for building contextual AI assistants and chatbots.
+Rasa has two main modules:
+•   NLU for understanding user messages 
+•   Core for holding conversations and deciding what to do next 
+
+###  How to Implement the BOT:
+•    Create a new folder for your chatbot project.
+•    Open that folder using Pycharm
+•    Create a new environment for your chatbot project from pycharm or from anaconda prompt.
+•    Run the command pip install rasa for installing all the rasa dependencies
+•    Run the command pip install spacy for installing spacy library.
+•    Then enter the following commands:
+   python -m spacy download en
+   python -m spacy download en_core_web_md
+   python -m spacy link en_core_web_mden
+
+•   After all this command run successfully, enter the command rasa init and for all the subsequent actions choose Y (for training the model etc).
+•   You’ll then end up with all the predefined structures which RASA would have built, 
+•   Open the ‘nlu.md’ file from the data folder and enter desired intents:This file is used to create all the intents and their sample utterances for conversation.
+•   Open the ‘domain.yml’ and register the newy added intet (This file is used to configure  the bot responses.)
+•   Open the ‘stories.md’ file from the data folder (This file is used to create the conversation flows.)
+•   After all this, you can just enter the command ‘rasa train’ to train the model with new conversation elements
+•   Bot is ready.
+
+### Communication channel Integration:-
+•  Downloadngrok from https://ngrok.com/download
+•  After extracting the zip file, open the ngrok file and run it.
+•  In ngrok, enter the command ‘ngrok http 5005 ’: ngrok provide tunnel IP, copy the-- https://<<ngrokurl>>.io
+•  Then go to telegram and create your own bot using Botfather:
+     a)	Open the telegram app and search for botfather(it is an inbuilt bot used to create other bots)
+     b)	Start a conversation with botfather and enter /newbotto create a newbot.
+     c)	Give a name to your bot
+     d)	Give a username to your bot, which must end in _bot.This generates an access token
+
+•  Open ‘credentials.yml’ inside bot  and enter:
+telegram:
+access_token:"obtained from telegram"
+verify:"your bot username"
+webhook_url:"https://<ngrokurl>/webhooks/telegram/webhook" , (ngrok url should be same URL which is coming once we have ngrok http 5005)
+
+•    Go to Pycharm terminal and enter the command ‘rasa run’ 
+•    Open one more terminal and run the command ‘rasa run actions’
+•    Now, you can chat with your bot from Telegram.
+
+
 
 ### Modules
 For maximum flexibility, the SDK is divided into three modules: Core, Remote and Web. Core and Remote are essential modules if you would like to use SDK to build your own microservice. An example of which is provided in the Web Module.
