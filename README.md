@@ -49,17 +49,16 @@ Rasa has two main modules:
      c)	Give a name to your bot
      d)	Give a username to your bot, which must end in _bot.This generates an access token
 
-5  Open ‘credentials.yml’ inside bot  and enter:
-telegram:
-access_token:"obtained from telegram"
-verify:"your bot username"
-webhook_url:"https://<ngrokurl>/webhooks/telegram/webhook" , (ngrok url should be same URL which is coming once we have ngrok http 5005)
+5   Open ‘credentials.yml’ inside bot  and enter:
+    telegram:
+    access_token:"obtained from telegram"
+    verify:"your bot username"
+    webhook_url:"https://<ngrokurl>/webhooks/telegram/webhook" , (ngrok url should be same URL which is coming once we have ngrok http 5005)
+6.  Go to Pycharm terminal and enter the command ‘rasa run’ 
+7.  Open one more terminal and run the command ‘rasa run actions’
+8.  Now, you can chat with your bot from Telegram.
 
-6.    Go to Pycharm terminal and enter the command ‘rasa run’ 
-7.    Open one more terminal and run the command ‘rasa run actions’
-8.    Now, you can chat with your bot from Telegram.
-
-#######
+#######################################
 
 ### Modules
 For maximum flexibility, the SDK is divided into three modules: Core, Remote and Web. Core and Remote are essential modules if you would like to use SDK to build your own microservice. An example of which is provided in the Web Module.
