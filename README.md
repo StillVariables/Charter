@@ -34,8 +34,8 @@ npm run start
 1. Create a new folder for your chatbot project.
 2. Open that folder using Pycharm
 3. Create a new environment for your chatbot project from pycharm or from anaconda prompt.
-4. Run the command pip install rasa for installing all the rasa dependencies
-5. Run the command pip install spacy for installing spacy library.
+4. Run the command ```pip install rasa``` for installing all the rasa dependencies.
+5. Run the command ```pip install spacy``` for installing spacy library.
 6. Then enter the following commands:
      ```nowrap
      python -m spacy download en
@@ -43,22 +43,22 @@ npm run start
      python -m spacy link en_core_web_mden
      ```
 7.   After all this command run successfully, enter the command ```rasa init``` and for all the subsequent actions choose Y (for training the model etc).
-8.   You’ll then end up with all the predefined structures which RASA would have built, 
-9.   Open the ‘nlu.md’ file from the data folder and enter desired intents:This file is used to create all the intents and their sample utterances for conversation.
-10.  Open the ‘domain.yml’ and register the newy added intet (This file is used to configure  the bot responses.)
-11.  Open the ‘stories.md’ file from the data folder (This file is used to create the conversation flows.)
-12.  After all this, you can just enter the command ```rasa train``` to train the model with new conversation elements
+8.   You’ll then end up with all the predefined structures which RASA would have built.
+9.   Open the ‘nlu.md’ file from the data folder and enter desired intents: This file is used to create all the intents and their sample utterances for conversation.
+10.  Open the ‘domain.yml’ and register the newy added intet (This file is used to configure  the bot responses).
+11.  Open the ‘stories.md’ file from the data folder (This file is used to create the conversation flows).
+12.  After all this, you can just enter the command ```rasa train``` to train the model with new conversation elements.
 13.  Charter(bot) is ready.
 
 ### Communication channel Integration:-
-1.  Downloadngrok from https://ngrok.com/download
+1.  Download ngrok from https://ngrok.com/download
 2.  After extracting the zip file, open the ngrok file and run it.
-3.  In ngrok, enter the command ‘ngrok http 5005 ’: ngrok provide tunnel IP, copy the-- https://<<ngrokurl>>.io
+3.  In ngrok, enter the command ```ngrok http 5005```: ngrok provide tunnel IP, copy the URL: ```https://<<ngrokurl>>.io```
 4.  Then go to telegram and create your own bot using Botfather:
-     a)	Open the telegram app and search for botfather(it is an inbuilt bot used to create other bots)
-     b)	Start a conversation with botfather and enter /newbotto create a newbot.
-     c)	Give a name to your bot
-     d)	Give a username to your bot, which must end in _bot.This generates an access token
+     1.	Open the telegram app and search for botfather (it is an inbuilt bot used to create other bots).
+     2.	Start a conversation with botfather and enter ```/newbotto``` create a newbot.
+     3.	Give a name to your bot.
+     4.	Give a username to your bot, which must end with ```_bot```.This generates an access token.
 5.  Open ‘credentials.yml’ inside bot  and enter:
     ```nowrap
     telegram:
@@ -67,11 +67,11 @@ npm run start
     webhook_url:"https://<ngrokurl>/webhooks/telegram/webhook" 
 	(ngrok url should be same URL which is coming once we have ngrok http 5005)
 	```
-6.  Go to Pycharm terminal and enter the command 
+6.  Go to Pycharm terminal and enter the command.
 	```nowrap
 	rasa run 
 	```
-7.  Open one more terminal and run the command 
+7.  Open one more terminal and run the command.
 	```nowrap
 	rasa run actions
 	```
