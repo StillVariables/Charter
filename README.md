@@ -5,14 +5,12 @@ Goal
 ---
 The aim of this application is to demonstrate ChatBot using open banking API's for customer queries related to branch, ATM, account details and balances with interative communication channel using open source libraries and tools.
 
---Edit from here--------------
 ### Prerequisites:-
 The prerequisites for developing and understanding a chatbot
-1. Python installed
-2. Microsoft Build tools with visual c++ 14.0 installed. Link:https://visualstudio.microsoft.com/downloads/
-3. Pycharm (Python Editor)
-
-
+1. Python should be installed. You can download from Link:https://www.python.org/downloads/
+2. Microsoft Build tools with Visual C++ 14.0 should be installed. Link:https://visualstudio.microsoft.com/downloads/
+3. Pycharm (Python Editor) to edit the scripts. Link:https://www.jetbrains.com/pycharm/download/#section=windows
+4. Node.js runtime Framwork should be installed for executing API calls. Can be installed from [here](https://nodejs.org/en/download/).
 
 ### Modules
 Rasa is an open source machine learning framework for building contextual AI assistants and chatbots.
@@ -30,7 +28,6 @@ Rasa has two main modules:
      python -m spacy download en
      python -m spacy download en_core_web_md
      python -m spacy link en_core_web_mden
-
 7.   After all this command run successfully, enter the command rasa init and for all the subsequent actions choose Y (for training the model etc).
 8.   You’ll then end up with all the predefined structures which RASA would have built, 
 9.   Open the ‘nlu.md’ file from the data folder and enter desired intents:This file is used to create all the intents and their sample utterances for conversation.
@@ -48,8 +45,7 @@ Rasa has two main modules:
      b)	Start a conversation with botfather and enter /newbotto create a newbot.
      c)	Give a name to your bot
      d)	Give a username to your bot, which must end in _bot.This generates an access token
-
-5   Open ‘credentials.yml’ inside bot  and enter:
+5.  Open ‘credentials.yml’ inside bot  and enter:
     telegram:
     access_token:"obtained from telegram"
     verify:"your bot username"
