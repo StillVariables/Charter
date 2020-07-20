@@ -64,7 +64,8 @@ npm run start
     telegram:
     access_token:"obtained from telegram"
     verify:"your bot username"
-    webhook_url:"https://<ngrokurl>/webhooks/telegram/webhook" , (ngrok url should be same URL which is coming once we have ngrok http 5005)
+    webhook_url:"https://<ngrokurl>/webhooks/telegram/webhook" 
+	(ngrok url should be same URL which is coming once we have ngrok http 5005)
 	```
 6.  Go to Pycharm terminal and enter the command 
 	```nowrap
