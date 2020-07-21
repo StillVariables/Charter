@@ -56,7 +56,7 @@ npm run start
 3.  In ngrok, enter the command ```ngrok http 5005```: ngrok provide tunnel IP, copy the URL: ```https://<<ngrokurl>>.io```
 4.  Then go to telegram and create your own bot using Botfather:
      1.	Open the telegram app and search for botfather (it is an inbuilt bot used to create other bots).
-     2.	Start a conversation with botfather and enter ```/newbotto``` create a newbot.
+     2.	Start a conversation with botfather and enter ```/newbot``` to create a newbot.
      3.	Give a name to your bot.
      4.	Give a username to your bot, which must end with ```_bot```.This generates an access token.
 5.  Open ‘credentials.yml’ inside bot  and enter:
