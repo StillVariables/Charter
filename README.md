@@ -10,7 +10,8 @@ The prerequisites for developing and understanding a chatbot
 1. Python should be installed. You can download from [here](https://www.python.org/downloads/)
 2. Microsoft Build tools with Visual C++ 14.0 should be installed. [Download Link](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 3. Pycharm (Python Editor) to edit the scripts, can be downloaded from [here](https://www.jetbrains.com/pycharm/download/#section=windows)
-4. Node.js runtime Framwork should be installed for executing API calls. Can be installed from [here](https://nodejs.org/en/download/).
+4. Node.js runtime Framwork should be installed for executing API calls. Can be installed from [here](https://nodejs.org/en/download/)
+5. Install Anaconda from [here](https://www.anaconda.com/products/individual)
 
 ### Modules
 ##### Bot Modules
