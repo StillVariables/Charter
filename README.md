@@ -19,7 +19,7 @@ Rasa has two main modules:
 1. NLU for understanding user messages.
 2. Core for holding conversations and deciding what to do next.
 ##### API Modules
-Node.js is an open-source, JavaScript runtime environment that executes JavaScript code. It provides web server to eexcute and call the open banking API's.
+Node.js is an open-source, JavaScript runtime environment that executes JavaScript code. It provides web server to execute and call the open banking API's.
 
 
 ###  Implementation:
